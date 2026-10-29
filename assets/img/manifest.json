@@ -1,0 +1,79 @@
+[
+ {
+  "arquivo": "assets/img/hero.jpg",
+  "origem": "haraodontologia_07.jpg",
+  "alt": "Dr. Eduardo Hara e Dr. João Vitor Hara no consultório da clínica",
+  "largura": 512,
+  "altura": 640
+ },
+ {
+  "arquivo": "assets/img/dr-eduardo.jpg",
+  "origem": "haraodontologia_07.jpg",
+  "alt": "Retrato do Dr. Eduardo Hara",
+  "largura": 286,
+  "altura": 576
+ },
+ {
+  "arquivo": "assets/img/dr-joao.jpg",
+  "origem": "haraodontologia_07.jpg",
+  "alt": "Retrato do Dr. João Vitor Hara",
+  "largura": 297,
+  "altura": 640
+ },
+ {
+  "arquivo": "assets/img/clinica-01.jpg",
+  "origem": "drjoaohara_05.jpg",
+  "alt": "Atendimento no consultório, com o Dr. João Vitor Hara e um paciente",
+  "largura": 361,
+  "altura": 361
+ },
+ {
+  "arquivo": "assets/img/clinica-02.jpg",
+  "origem": "drjoaohara_01.jpg",
+  "alt": "Confecção de uma placa de proteção, com a resina sob luz de fotopolimerização",
+  "largura": 360,
+  "altura": 360
+ },
+ {
+  "arquivo": "assets/img/clinica-04.jpg",
+  "origem": "haraodontologia_07.jpg",
+  "alt": "Dr. Eduardo Hara e Dr. João Vitor Hara no consultório da clínica",
+  "largura": 460,
+  "altura": 460
+ },
+ {
+  "arquivo": "assets/img/avatar.jpg",
+  "origem": "avatar_haraodontologia.jpg",
+  "alt": "Marca da Hara Odontologia",
+  "largura": 150,
+  "altura": 150
+ },
+ {
+  "arquivo": "assets/img/retrato-01.jpg",
+  "origem": "drjoaohara_02.jpg",
+  "alt": "Paciente sorrindo com placa de proteção estampada",
+  "largura": 480,
+  "altura": 640
+ },
+ {
+  "arquivo": "assets/img/retrato-02.jpg",
+  "origem": "drjoaohara_04.jpg",
+  "alt": "Placa de proteção roxa com o nome do paciente gravado",
+  "largura": 480,
+  "altura": 640
+ },
+ {
+  "arquivo": "assets/img/retrato-03.jpg",
+  "origem": "drjoaohara_06.jpg",
+  "alt": "Paciente em pose de luta com placa verde e preta",
+  "largura": 480,
+  "altura": 640
+ },
+ {
+  "arquivo": "assets/img/retrato-04.jpg",
+  "origem": "drjoaohara_08.jpg",
+  "alt": "Paciente com placa de proteção personalizada",
+  "largura": 480,
+  "altura": 640
+ }
+]
