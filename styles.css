@@ -133,6 +133,8 @@ em { font-style: italic; }
   .hero__media::after { background: linear-gradient(90deg, var(--graphite) 0%, rgba(20, 20, 22, .35) 38%, rgba(20, 20, 22, .05) 70%), linear-gradient(0deg, var(--graphite) 0%, transparent 28%); }
   .hero__in { padding: 150px var(--gutter) 64px; justify-content: center; }
   .hero__foot { grid-template-columns: 1fr; max-width: 680px; margin-top: 44px; gap: 36px; }
+  .hero__title { font-size: clamp(3.75rem, 5.6vw, 8.25rem); max-width: 50vw; }
+  .hero__img img { object-position: 62% 30%; }
 }
 
 /* ---------- marquee ---------- */
