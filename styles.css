@@ -142,8 +142,6 @@ em { font-style: italic; }
 .manifesto__in { display: grid; gap: 24px; }
 .manifesto__text { font: 300 clamp(2rem, 1.2rem + 3.4vw, 4.4rem)/1.12 var(--serif); letter-spacing: -.02em; max-width: 22ch; color: var(--ink); }
 .manifesto__text em { color: var(--copper); }
-.manifesto__text .w { opacity: .14; transition: opacity .5s linear; }
-.manifesto__text .w.on { opacity: 1; }
 .manifesto__sign { display: flex; align-items: center; gap: 20px; font: 500 .75rem/1.7 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
 .manifesto__sign .line { width: 64px; height: 1px; background: var(--copper); }
 @media (min-width: 1000px) { .manifesto__in { grid-template-columns: 1fr 3fr; } .manifesto__in .kicker { padding-top: 22px; align-self: start; } .manifesto__sign { grid-column: 2; } }
@@ -291,6 +289,7 @@ em { font-style: italic; }
 /* ---------- reveals ---------- */
 .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0s); }
 .js .reveal.is-in { opacity: 1; transform: none; }
+.js .manifesto__text.reveal { transform: none; transition: opacity .5s ease; transition-delay: 0s; }
 .js .clip img { clip-path: inset(100% 0 0 0); transform: scale(1.2); transition: clip-path 1.2s var(--ease-io), transform 1.6s var(--ease); transition-delay: var(--d, 0s); }
 .js .clip.is-in img { clip-path: inset(0); transform: none; }
 .js .clip.is-in:hover img { transform: scale(1.05); }
@@ -300,5 +299,4 @@ em { font-style: italic; }
   *, *::before, *::after { transition-duration: .01ms !important; transition-delay: 0s !important; animation: none !important; }
   .js .reveal, .js .clip, .js .clip img, [data-in], .hero__title .ln > span { opacity: 1 !important; transform: none !important; clip-path: none !important; }
   .hero__media { clip-path: none !important; }
-  .manifesto__text .w { opacity: 1 !important; }
 }

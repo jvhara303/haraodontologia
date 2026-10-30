@@ -28,24 +28,6 @@
   nav.querySelectorAll('.nav__links a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('is-open')) { setMenu(false); toggle.focus(); } });
 
-  // manifesto: palavra por palavra
-  var mt = document.querySelector('[data-words]'), words = [];
-  if (mt) {
-    (function split(node) {
-      Array.prototype.slice.call(node.childNodes).forEach(function (n) {
-        if (n.nodeType === 3) {
-          var frag = document.createDocumentFragment();
-          n.textContent.split(/(\s+)/).forEach(function (t) {
-            if (!t) return;
-            if (/^\s+$/.test(t)) { frag.appendChild(document.createTextNode(t)); return; }
-            var s = document.createElement('span'); s.className = 'w'; s.textContent = t; frag.appendChild(s); words.push(s);
-          });
-          n.parentNode.replaceChild(frag, n);
-        } else if (n.nodeType === 1) split(n);
-      });
-    })(mt);
-  }
-
   // reveals com escalonamento por grupo
   var items = document.querySelectorAll('.reveal, .clip');
   var groups = new Map();
@@ -92,7 +74,7 @@
     });
   }
 
-  // loop de rolagem: parallax, manifesto, timeline
+  // loop de rolagem: parallax, timeline
   var heroImg = document.querySelector('[data-parallax]');
   var tl = document.getElementById('timeline'), fill = document.getElementById('tlFill');
   var tls = tl ? tl.querySelectorAll('.tl') : [];
@@ -104,12 +86,6 @@
     if (typeof sweep === 'function') sweep();
     if (reduce) return;
     if (heroImg && y < vh * 1.2) heroImg.style.transform = 'translate3d(0,' + (y * 0.18) + 'px,0)';
-    if (words.length) {
-      var r = mt.getBoundingClientRect();
-      var p = Math.min(1, Math.max(0, (vh * 0.85 - r.top) / (r.height + vh * 0.35)));
-      var n = Math.round(p * words.length);
-      for (var i = 0; i < words.length; i++) words[i].classList.toggle('on', i < n);
-    }
     if (tl) {
       var t = tl.getBoundingClientRect();
       var q = Math.min(1, Math.max(0, (vh * 0.6 - t.top) / t.height));
@@ -122,7 +98,6 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll);
   frame();
-  if (reduce) words.forEach(function (w) { w.classList.add('on'); });
 
   // imagem ausente
   document.querySelectorAll('img').forEach(function (img) {
