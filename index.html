@@ -41,7 +41,19 @@
     "sameAs": ["https://www.instagram.com/haraodontologia/"]
   }
   </script>
-  <script src="tracking.js" async></script>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1127389279664783');
+  window.__pvEventID = 'pv-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 10);
+  fbq('track', 'PageView', {}, { eventID: window.__pvEventID });
+  </script>
+  <!-- End Meta Pixel Code -->
+  <script src="tracking.js" defer></script>
 </head>
 <body>
   <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1127389279664783&ev=PageView&noscript=1"></noscript>

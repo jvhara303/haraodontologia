@@ -4,12 +4,6 @@
   var PIXEL_ID = '1127389279664783';
   var CAPI_ENDPOINT = 'https://hara-capi.haraodontologia.workers.dev';
 
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-  document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', PIXEL_ID);
 
   function uid() {
     try { if (window.crypto && crypto.randomUUID) return crypto.randomUUID(); } catch (e) {}
@@ -29,9 +23,7 @@
     return '';
   }
 
-  function trackEvent(name, params) {
-    var eventID = uid();
-    try { fbq('track', name, params || {}, { eventID: eventID }); } catch (e) {}
+  function sendCapi(name, eventID, params) {
     try {
       var body = JSON.stringify({
         event_name: name,
@@ -48,10 +40,15 @@
       }
     } catch (e) {}
   }
+  function trackEvent(name, params) {
+    var eventID = uid();
+    try { fbq('track', name, params || {}, { eventID: eventID }); } catch (e) {}
+    sendCapi(name, eventID, params);
+  }
   window.trackEvent = trackEvent;
 
-  // espera o fbevents.js criar o cookie _fbp antes de mandar o PageView
-  setTimeout(function () { trackEvent('PageView'); }, 600);
+  // PageView do navegador já disparou no <head>; manda o mesmo eventID pelo servidor (CAPI)
+  setTimeout(function () { sendCapi('PageView', window.__pvEventID || uid(), {}); }, 800);
 
   document.addEventListener('click', function (e) {
     var a = e.target && e.target.closest ? e.target.closest('a[href*="wa.me"], a[href*="whatsapp"]') : null;
