@@ -308,3 +308,4 @@ em { font-style: italic; }
 .plates__points p { margin: 0; color: var(--muted); font-size: .95rem; line-height: 1.6; max-width: 42ch; }
 @media (min-width: 700px) { .plates__points { grid-template-columns: repeat(2, 1fr); column-gap: 40px; } }
 @media (min-width: 1000px) { .plates__points { grid-template-columns: repeat(4, 1fr); column-gap: 32px; max-width: 1360px; margin-bottom: 56px; } }
+.steps__aside .h2 { font-size: clamp(1.9rem, 1.2rem + 1.5vw, 2.6rem); }
