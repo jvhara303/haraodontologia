@@ -54,12 +54,22 @@
     el.style.setProperty('--d', Math.min(i * 0.09, 0.45) + 's');
     groups.set(p, i + 1);
   });
+  // fail-safe: threshold 0, revela o que já está na tela ou acima dela, checagem no scroll e timeout final
+  function show(el) { el.classList.add('is-in'); }
+  function sweep() {
+    var vh = window.innerHeight;
+    items.forEach(function (el) { if (!el.classList.contains('is-in') && el.getBoundingClientRect().top < vh * 0.98) show(el); });
+  }
   if ('IntersectionObserver' in window && !reduce) {
     var io = new IntersectionObserver(function (es) {
-      es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
-    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+      es.forEach(function (en) { if (en.isIntersecting) { show(en.target); io.unobserve(en.target); } });
+    }, { threshold: 0, rootMargin: '0px 0px -5% 0px' });
     items.forEach(function (el) { io.observe(el); });
-  } else items.forEach(function (el) { el.classList.add('is-in'); });
+    sweep();
+    window.addEventListener('load', sweep);
+    setTimeout(sweep, 1500);
+    setTimeout(function () { items.forEach(show); }, 6000);
+  } else items.forEach(show);
 
   // especialidades: troca de imagem
   var rows = document.querySelectorAll('.spec__row'), shots = document.querySelectorAll('.spec__viewer img');
@@ -91,6 +101,7 @@
     ticking = false;
     var vh = window.innerHeight, y = window.scrollY;
     onNav();
+    if (typeof sweep === 'function') sweep();
     if (reduce) return;
     if (heroImg && y < vh * 1.2) heroImg.style.transform = 'translate3d(0,' + (y * 0.18) + 'px,0)';
     if (words.length) {

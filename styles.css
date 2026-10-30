@@ -97,7 +97,7 @@ em { font-style: italic; }
 }
 
 /* ---------- hero ---------- */
-.hero { position: relative; min-height: 100svh; display: grid; grid-template-rows: 1fr auto; background: var(--graphite); color: var(--ivory); overflow: hidden; isolation: isolate; }
+.hero { position: relative; min-height: min(100svh, 860px); display: grid; grid-template-rows: 1fr auto; background: var(--graphite); color: var(--ivory); overflow: hidden; isolation: isolate; }
 .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(50% 60% at 70% 40%, rgba(242, 122, 31, .14), transparent 70%); }
 .hero__media { position: absolute; z-index: -1; inset: 0 0 auto auto; width: 100%; height: 72svh; overflow: hidden; clip-path: inset(0 0 100% 0); }
 .is-ready .hero__media { clip-path: inset(0); transition: clip-path 1.6s var(--ease-io) .1s; }
@@ -176,7 +176,6 @@ em { font-style: italic; }
 
 /* ---------- doutores ---------- */
 .docs { position: relative; background: var(--graphite); color: var(--ivory); padding-block: var(--pad); overflow: hidden; isolation: isolate; }
-.docs__ghost { position: absolute; z-index: -1; right: -2vw; top: 6%; font: 300 italic clamp(10rem, 30vw, 30rem)/.8 var(--serif); color: transparent; -webkit-text-stroke: 1px rgba(247, 243, 237, .07); pointer-events: none; user-select: none; }
 .docs .kicker { color: var(--orange); }
 .docs__head { max-width: 900px; margin-bottom: clamp(32px, 4vw, 56px); }
 .docs__grid { display: grid; gap: 48px; }
@@ -271,10 +270,10 @@ em { font-style: italic; }
 .contact__list dd { font: 400 1.375rem/1.4 var(--serif); }
 .ulink { background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat; transition: background-size .5s var(--ease), color .3s; }
 .ulink:hover { color: var(--copper); background-size: 0 1px; background-position: 100% 100%; }
-.map { aspect-ratio: 4 / 3; overflow: hidden; background: var(--sand); }
+.map { height: 300px; overflow: hidden; background: var(--sand); }
 .map iframe { width: 100%; height: 100%; border: 0; display: block; filter: grayscale(1) contrast(1.05); transition: filter .8s var(--ease); }
 .map:hover iframe { filter: none; }
-@media (min-width: 1000px) { .contact__grid { grid-template-columns: 1fr 1.15fr; gap: 64px; align-items: center; } .map { aspect-ratio: 4 / 3; } }
+@media (min-width: 1000px) { .contact__grid { grid-template-columns: 1fr 1.15fr; gap: 64px; align-items: center; } .map { height: 360px; } }
 
 /* ---------- footer ---------- */
 .foot { background: var(--coal); color: var(--ivory); padding-top: clamp(48px, 5vw, 72px); }
@@ -290,18 +289,16 @@ em { font-style: italic; }
 @media (min-width: 800px) { .foot__cols { grid-template-columns: 1.5fr 1fr 1fr; } }
 
 /* ---------- reveals ---------- */
-.js .reveal { opacity: 0; transform: translateY(36px); transition: opacity 1.1s var(--ease), transform 1.1s var(--ease); transition-delay: var(--d, 0s); }
+.js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0s); }
 .js .reveal.is-in { opacity: 1; transform: none; }
-.js .clip { clip-path: inset(100% 0 0 0); transition: clip-path 1.4s var(--ease-io); transition-delay: var(--d, 0s); }
-.js .clip img { transform: scale(1.25); transition: transform 1.8s var(--ease); }
-.js .clip.is-in { clip-path: inset(0); }
-.js .clip.is-in img { transform: none; }
+.js .clip img { clip-path: inset(100% 0 0 0); transform: scale(1.2); transition: clip-path 1.2s var(--ease-io), transform 1.6s var(--ease); transition-delay: var(--d, 0s); }
+.js .clip.is-in img { clip-path: inset(0); transform: none; }
 .js .clip.is-in:hover img { transform: scale(1.05); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; transition-delay: 0s !important; animation: none !important; }
-  .js .reveal, .js .clip, [data-in], .hero__title .ln > span { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  .js .reveal, .js .clip, .js .clip img, [data-in], .hero__title .ln > span { opacity: 1 !important; transform: none !important; clip-path: none !important; }
   .hero__media { clip-path: none !important; }
   .manifesto__text .w { opacity: 1 !important; }
 }
