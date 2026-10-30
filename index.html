@@ -19,8 +19,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400;1,6..72,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3">
 
   <script type="application/ld+json">
   {
@@ -61,176 +61,218 @@
 
   <header class="nav" id="nav">
     <div class="nav__in">
-      <a class="wordmark" href="#topo" aria-label="Hara Odontologia, início">
-        <img class="wordmark__logo" src="assets/img/avatar.jpg" alt="" width="150" height="150">
-        <span>Hara</span>
+      <a class="brand" href="#topo" aria-label="Hara Odontologia, início">
+        <img class="brand__logo" src="assets/img/avatar.jpg" alt="" width="150" height="150">
+        <span class="brand__name">Hara<small>Odontologia</small></span>
       </a>
       <nav class="nav__links" id="menu" aria-label="Principal">
-        <a href="#especialidades">Especialidades</a>
-        <a href="#doutores">Os doutores</a>
-        <a href="#clinica">A clínica</a>
-        <a href="#placas">Placas</a>
-        <a href="#contato">Contato</a>
-        <a class="btn btn--pill btn--sm nav__cta" href="https://wa.me/5566996195448?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener">Agendar</a>
+        <a href="#manifesto"><span>01</span>A clínica</a>
+        <a href="#especialidades"><span>02</span>Especialidades</a>
+        <a href="#doutores"><span>03</span>Os doutores</a>
+        <a href="#consulta"><span>04</span>Primeira consulta</a>
+        <a href="#contato"><span>05</span>Contato</a>
+        <a class="btn btn--solid btn--sm nav__cta" href="https://wa.me/5566996195448?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener"><span class="btn__t">Agendar</span><svg class="ar" width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"/></svg></a>
       </nav>
       <button class="nav__toggle" id="toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path class="i-open" d="M3 6h14M3 14h14"/><path class="i-close" d="M5 5l10 10M15 5L5 15"/></svg>
+        <span></span><span></span>
       </button>
     </div>
   </header>
 
   <main id="conteudo">
+    <!-- HERO -->
     <section class="hero" id="topo">
-      <div class="wrap hero__in">
-        <div class="hero__txt">
-          <p class="eyebrow">Sinop, Mato Grosso</p>
-          <h1 class="display hero__title">Odontologia feita com <em>calma</em> e critério.</h1>
-          <p class="lede">Estética, implantes, periodontia e prótese com os doutores Eduardo e João Vitor Hara. Cada tratamento começa por ouvir você e examinar com cuidado.</p>
-          <div class="cta-row">
-            <a class="btn btn--pill" href="https://wa.me/5566996195448?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener">Agendar consulta <span aria-hidden="true">→</span></a>
-            <a class="btn btn--ghost" href="#clinica">Conhecer a clínica</a>
+      <div class="hero__media" aria-hidden="false">
+        <div class="hero__img" data-parallax>
+          <img src="assets/img/hero.jpg" alt="Dr. Eduardo Hara e Dr. João Vitor Hara no consultório da clínica" width="512" height="640" fetchpriority="high">
+        </div>
+      </div>
+      <div class="hero__in">
+        <p class="kicker hero__kicker" data-in><span class="dot"></span>Hara Odontologia · Sinop, MT</p>
+        <h1 class="hero__title">
+          <span class="ln"><span>Odontologia</span></span>
+          <span class="ln"><span>de alto padrão,</span></span>
+          <span class="ln"><span>feita com <em>critério.</em></span></span>
+        </h1>
+        <div class="hero__foot">
+          <p class="hero__lede" data-in>Estética, implantes, periodontia e prótese com os doutores Eduardo e João Vitor Hara. Cada tratamento começa por ouvir você e examinar com cuidado.</p>
+          <div class="hero__ctas" data-in>
+            <a class="btn btn--solid" href="https://wa.me/5566996195448?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener" data-magnetic><span class="btn__t">Agendar avaliação</span><svg class="ar" width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"/></svg></a>
+            <a class="btn btn--line" href="#manifesto"><span class="btn__t">Conhecer a clínica</span></a>
           </div>
         </div>
-        <figure class="hero__fig">
-          <div class="media hero__frame">
-            <img class="media__img" src="assets/img/hero.jpg" alt="Dr. Eduardo Hara e Dr. João Vitor Hara no consultório da clínica" width="512" height="640" fetchpriority="high">
-          </div>
-          <figcaption class="hero__card">
-            <span>Sinop · MT</span>
-            <span>Estética / Implantes / Periodontia / Prótese</span>
-          </figcaption>
-        </figure>
+      </div>
+      <div class="hero__bar" data-in>
+        <span>Estética</span><span>Implantes</span><span>Periodontia</span><span>Prótese</span>
+        <a class="hero__scroll" href="#manifesto" aria-label="Rolar para o conteúdo"><i></i>Role</a>
       </div>
     </section>
 
-    <section class="section" id="especialidades">
-      <div class="wrap">
-        <header class="head reveal">
-          <p class="eyebrow">Especialidades</p>
-          <h2 class="display h2">Quatro áreas, um mesmo <em>cuidado</em>.</h2>
-          <p class="lede">O que cada tratamento é, em linguagem simples. A indicação certa para o seu caso só é definida na avaliação presencial.</p>
-        </header>
-        <div class="spec">
-          <article class="spec__item reveal">
-            <span class="mono">01</span>
-            <h3 class="display h3">Estética</h3>
-            <p>Tratamentos que ajustam cor, formato e proporção dos dentes e do sorriso, respeitando a sua anatomia e o que você deseja mudar.</p>
-          </article>
-          <article class="spec__item reveal">
-            <span class="mono">02</span>
-            <h3 class="display h3">Implantes</h3>
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Estética</span><b>✦</b><span>Implantes</span><b>✦</b><span>Periodontia</span><b>✦</b><span>Prótese</span><b>✦</b><span>Placas personalizadas</span><b>✦</b>
+        <span>Estética</span><b>✦</b><span>Implantes</span><b>✦</b><span>Periodontia</span><b>✦</b><span>Prótese</span><b>✦</b><span>Placas personalizadas</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto" id="manifesto">
+      <div class="wrap manifesto__in">
+        <p class="kicker reveal"><span class="dot"></span>Nossa filosofia</p>
+        <p class="manifesto__text" data-words>Não acreditamos em sorrisos em série. Cada plano nasce de uma escuta atenta, de um exame minucioso e de decisões tomadas <em>com você</em> — nunca por você.</p>
+        <div class="manifesto__sign reveal">
+          <span class="line"></span>
+          <p>Dr. Eduardo Hara<br>Dr. João Vitor Hara</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESPECIALIDADES -->
+    <section class="spec" id="especialidades">
+      <div class="wrap spec__grid">
+        <div class="spec__aside">
+          <p class="kicker reveal"><span class="dot"></span>Especialidades</p>
+          <h2 class="h2 reveal">Quatro áreas.<br>Um só <em>padrão</em>.</h2>
+          <p class="spec__note reveal">O que cada tratamento é, em linguagem simples. A indicação certa para o seu caso só é definida na avaliação presencial.</p>
+          <div class="spec__viewer reveal" aria-hidden="true">
+            <img class="is-on" src="assets/img/clinica-04.jpg" alt="" data-k="0" loading="lazy">
+            <img src="assets/img/clinica-01.jpg" alt="" data-k="1" loading="lazy">
+            <img src="assets/img/hero.jpg" alt="" data-k="2" loading="lazy">
+            <img src="assets/img/clinica-02.jpg" alt="" data-k="3" loading="lazy">
+          </div>
+        </div>
+        <ol class="spec__list">
+          <li class="spec__row reveal" data-k="0">
+            <span class="spec__n">01</span>
+            <h3 class="spec__name">Estética</h3>
+            <p>Ajustes de cor, formato e proporção dos dentes e do sorriso, respeitando a sua anatomia e o que você deseja mudar.</p>
+          </li>
+          <li class="spec__row reveal" data-k="1">
+            <span class="spec__n">02</span>
+            <h3 class="spec__name">Implantes</h3>
             <p>Pino de titânio colocado no osso para substituir a raiz de um dente perdido e servir de base para uma coroa. Exige avaliação do osso e da saúde geral.</p>
-          </article>
-          <article class="spec__item reveal">
-            <span class="mono">03</span>
-            <h3 class="display h3">Periodontia</h3>
-            <p>Cuidado com as estruturas que sustentam os dentes: gengiva e osso. Trata sangramentos, inflamações e outras alterações da gengiva.</p>
-          </article>
-          <article class="spec__item reveal">
-            <span class="mono">04</span>
-            <h3 class="display h3">Prótese</h3>
+          </li>
+          <li class="spec__row reveal" data-k="2">
+            <span class="spec__n">03</span>
+            <h3 class="spec__name">Periodontia</h3>
+            <p>Cuidado com as estruturas que sustentam os dentes — gengiva e osso. Trata sangramentos, inflamações e outras alterações da gengiva.</p>
+          </li>
+          <li class="spec__row reveal" data-k="3">
+            <span class="spec__n">04</span>
+            <h3 class="spec__name">Prótese</h3>
             <p>Reposição de dentes ausentes ou muito danificados por coroas, pontes ou próteses, para recuperar mastigação, fala e aparência.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--tint" id="doutores">
-      <div class="wrap">
-        <header class="head reveal">
-          <p class="eyebrow">Os doutores</p>
-          <h2 class="display h2">Dois doutores, um mesmo <em>padrão</em> de cuidado.</h2>
-        </header>
-        <div class="docs">
-          <article class="doc reveal">
-            <div class="media doc__photo doc__photo--a">
-              <img class="media__img" src="assets/img/dr-eduardo.jpg" alt="Retrato do Dr. Eduardo Hara" width="286" height="576" loading="lazy">
-            </div>
-            <div class="doc__body">
-              <p class="mono">Cirurgião-dentista</p>
-              <h3 class="display h3">Dr. Eduardo Hara</h3>
-              <!-- TODO: CRO -->
-              <p class="doc__meta">Estética / Implantes / Periodontia / Prótese</p>
-            </div>
-          </article>
-          <article class="doc doc--b reveal">
-            <div class="media doc__photo doc__photo--b">
-              <img class="media__img" src="assets/img/dr-joao.jpg" alt="Retrato do Dr. João Vitor Hara" width="297" height="640" loading="lazy">
-            </div>
-            <div class="doc__body">
-              <p class="mono">Cirurgião-dentista</p>
-              <h3 class="display h3">Dr. João Vitor Hara</h3>
-              <!-- TODO: CRO -->
-              <p class="doc__meta">Estética / Implantes / Periodontia / Prótese</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="clinica">
-      <div class="wrap">
-        <header class="head reveal">
-          <p class="eyebrow">A clínica</p>
-          <h2 class="display h2">Um espaço pensado para você se sentir <em>em casa</em>.</h2>
-        </header>
-        <div class="gallery">
-          <figure class="media g reveal"><img class="media__img" src="assets/img/clinica-01.jpg" alt="Atendimento no consultório, com o Dr. João Vitor Hara e um paciente" width="361" height="361" loading="lazy"></figure>
-          <figure class="media g g2 reveal"><img class="media__img" src="assets/img/clinica-02.jpg" alt="Confecção de uma placa de proteção, com a resina sob luz de fotopolimerização" width="360" height="360" loading="lazy"></figure>
-          <figure class="media g g4 reveal"><img class="media__img" src="assets/img/clinica-04.jpg" alt="Dr. Eduardo Hara e Dr. João Vitor Hara no consultório da clínica" width="460" height="460" loading="lazy"></figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--tint" id="placas">
-      <div class="wrap">
-        <header class="head reveal">
-          <p class="eyebrow">Placas personalizadas</p>
-          <h2 class="display h2">Detalhe que passa <em>despercebido</em>.</h2>
-          <p class="lede">Placas de proteção feitas sob medida para quem treina e compete, desenhadas com o paciente.</p>
-        </header>
-        <div class="plates">
-          <div class="plates-grid" role="list">
-            <figure class="plate reveal" role="listitem"><div class="media"><img class="media__img" src="assets/img/retrato-01.jpg" alt="Paciente sorrindo com placa de proteção estampada" width="480" height="640" loading="lazy"></div><figcaption class="mono">Placa personalizada</figcaption></figure>
-            <figure class="plate reveal" role="listitem"><div class="media"><img class="media__img" src="assets/img/retrato-02.jpg" alt="Placa de proteção roxa com o nome do paciente gravado" width="480" height="640" loading="lazy"></div><figcaption class="mono">Nome do paciente na placa</figcaption></figure>
-            <figure class="plate reveal" role="listitem"><div class="media"><img class="media__img" src="assets/img/retrato-03.jpg" alt="Paciente em pose de luta com placa verde e preta" width="480" height="640" loading="lazy"></div><figcaption class="mono">Placa personalizada</figcaption></figure>
-            <figure class="plate reveal" role="listitem"><div class="media"><img class="media__img" src="assets/img/retrato-04.jpg" alt="Paciente com placa de proteção personalizada" width="480" height="640" loading="lazy"></div><figcaption class="mono">Placa personalizada</figcaption></figure>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="consulta">
-      <div class="wrap">
-        <header class="head reveal">
-          <p class="eyebrow">Como é a primeira consulta</p>
-          <h2 class="display h2">Primeiro entender, depois <em>propor</em>.</h2>
-          <p class="lede">O caminho é o mesmo para todos, mas o plano é sempre individual.</p>
-        </header>
-        <ol class="steps">
-          <li class="reveal"><span class="steps__n display">1</span><h3 class="display h3">Avaliação</h3><p>Conversamos sobre sua queixa e histórico e examinamos boca, dentes e gengiva, com exames complementares quando indicados.</p></li>
-          <li class="reveal"><span class="steps__n display">2</span><h3 class="display h3">Plano de tratamento</h3><p>Apresentamos as opções, o que cada uma envolve e a ordem das etapas. Você decide com informação.</p></li>
-          <li class="reveal"><span class="steps__n display">3</span><h3 class="display h3">Execução</h3><p>O tratamento é realizado em etapas, conforme o plano combinado.</p></li>
-          <li class="reveal"><span class="steps__n display">4</span><h3 class="display h3">Acompanhamento</h3><p>Retornos periódicos para revisar o resultado e manter a saúde bucal ao longo do tempo.</p></li>
+          </li>
         </ol>
       </div>
     </section>
 
-    <section class="section section--tint" id="contato">
-      <div class="wrap contact">
-        <div class="contact__txt reveal">
-          <p class="eyebrow">Localização e contato</p>
-          <h2 class="display h2">Venha nos <em>conhecer</em>.</h2>
-          <address class="addr">
-            Rua das Hortênsias, 1439<br>
-            Setor Comercial, Sinop - MT<br>
-            CEP 78.550-100
-          </address>
-          <!-- TODO: horário de atendimento -->
-          <p class="mono">Horário de atendimento: a confirmar pelo WhatsApp</p>
-          <a class="btn btn--pill btn--lg" href="https://wa.me/5566996195448?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener">Chamar no WhatsApp · (66) 99619-5448 <span aria-hidden="true">→</span></a>
+    <!-- DOUTORES -->
+    <section class="docs" id="doutores">
+      <div class="docs__ghost" aria-hidden="true">Hara</div>
+      <div class="wrap">
+        <header class="docs__head">
+          <p class="kicker reveal"><span class="dot"></span>Os doutores</p>
+          <h2 class="h2 reveal">Dois doutores.<br>Um mesmo <em>padrão</em> de cuidado.</h2>
+        </header>
+        <div class="docs__grid">
+          <article class="doc">
+            <div class="doc__photo clip"><img src="assets/img/dr-eduardo.jpg" alt="Retrato do Dr. Eduardo Hara" width="286" height="576" loading="lazy"></div>
+            <div class="doc__body reveal">
+              <span class="doc__idx">I</span>
+              <h3 class="doc__name">Dr. Eduardo <em>Hara</em></h3>
+              <p class="doc__role">Cirurgião-dentista</p>
+              <!-- TODO: CRO -->
+              <ul class="doc__tags"><li>Estética</li><li>Implantes</li><li>Periodontia</li><li>Prótese</li></ul>
+            </div>
+          </article>
+          <article class="doc doc--b">
+            <div class="doc__photo clip"><img src="assets/img/dr-joao.jpg" alt="Retrato do Dr. João Vitor Hara" width="297" height="640" loading="lazy"></div>
+            <div class="doc__body reveal">
+              <span class="doc__idx">II</span>
+              <h3 class="doc__name">Dr. João Vitor <em>Hara</em></h3>
+              <p class="doc__role">Cirurgião-dentista</p>
+              <!-- TODO: CRO -->
+              <ul class="doc__tags"><li>Estética</li><li>Implantes</li><li>Periodontia</li><li>Prótese</li></ul>
+            </div>
+          </article>
         </div>
-        <div class="map reveal">
+      </div>
+    </section>
+
+    <!-- CLÍNICA -->
+    <section class="clinic" id="clinica">
+      <div class="wrap clinic__grid">
+        <div class="clinic__txt">
+          <p class="kicker reveal"><span class="dot"></span>A clínica</p>
+          <h2 class="h2 reveal">Um espaço pensado para você se sentir <em>em casa</em>.</h2>
+          <p class="clinic__lede reveal">Atendimento com calma, no Setor Comercial de Sinop — do acolhimento ao acompanhamento.</p>
+        </div>
+        <figure class="clinic__a clip"><img src="assets/img/clinica-04.jpg" alt="Dr. Eduardo Hara e Dr. João Vitor Hara no consultório da clínica" width="460" height="460" loading="lazy"></figure>
+        <figure class="clinic__b clip"><img src="assets/img/clinica-01.jpg" alt="Atendimento no consultório, com o Dr. João Vitor Hara e um paciente" width="361" height="361" loading="lazy"></figure>
+        <figure class="clinic__c clip"><img src="assets/img/clinica-02.jpg" alt="Confecção de uma placa de proteção, com a resina sob luz de fotopolimerização" width="360" height="360" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <!-- PLACAS -->
+    <section class="plates" id="placas">
+      <div class="wrap plates__head">
+        <div>
+          <p class="kicker reveal"><span class="dot"></span>Placas personalizadas</p>
+          <h2 class="h2 reveal">Detalhe que passa <em>despercebido</em>.</h2>
+        </div>
+        <p class="plates__lede reveal">Placas de proteção feitas sob medida para quem treina e compete — desenhadas junto com o paciente.</p>
+      </div>
+      <div class="plates__rail" role="list">
+        <figure class="plate reveal" role="listitem"><div class="plate__img"><img src="assets/img/retrato-01.jpg" alt="Paciente sorrindo com placa de proteção estampada" width="480" height="640" loading="lazy"></div><figcaption><span>01</span>Placa personalizada</figcaption></figure>
+        <figure class="plate reveal" role="listitem"><div class="plate__img"><img src="assets/img/retrato-02.jpg" alt="Placa de proteção roxa com o nome do paciente gravado" width="480" height="640" loading="lazy"></div><figcaption><span>02</span>Nome do paciente na placa</figcaption></figure>
+        <figure class="plate reveal" role="listitem"><div class="plate__img"><img src="assets/img/retrato-03.jpg" alt="Paciente em pose de luta com placa verde e preta" width="480" height="640" loading="lazy"></div><figcaption><span>03</span>Placa personalizada</figcaption></figure>
+        <figure class="plate reveal" role="listitem"><div class="plate__img"><img src="assets/img/retrato-04.jpg" alt="Paciente com placa de proteção personalizada" width="480" height="640" loading="lazy"></div><figcaption><span>04</span>Placa personalizada</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- PRIMEIRA CONSULTA -->
+    <section class="steps" id="consulta">
+      <div class="wrap steps__grid">
+        <div class="steps__aside">
+          <p class="kicker reveal"><span class="dot"></span>A primeira consulta</p>
+          <h2 class="h2 reveal">Primeiro entender.<br>Depois <em>propor</em>.</h2>
+          <p class="steps__note reveal">O caminho é o mesmo para todos. O plano, nunca.</p>
+        </div>
+        <ol class="timeline" id="timeline">
+          <li class="tl reveal"><span class="tl__n">01</span><div><h3>Avaliação</h3><p>Conversamos sobre sua queixa e histórico e examinamos boca, dentes e gengiva, com exames complementares quando indicados.</p></div></li>
+          <li class="tl reveal"><span class="tl__n">02</span><div><h3>Plano de tratamento</h3><p>Apresentamos as opções, o que cada uma envolve e a ordem das etapas. Você decide com informação.</p></div></li>
+          <li class="tl reveal"><span class="tl__n">03</span><div><h3>Execução</h3><p>O tratamento é realizado em etapas, conforme o plano combinado.</p></div></li>
+          <li class="tl reveal"><span class="tl__n">04</span><div><h3>Acompanhamento</h3><p>Retornos periódicos para revisar o resultado e manter a saúde bucal ao longo do tempo.</p></div></li>
+          <span class="timeline__bar" aria-hidden="true"><i id="tlFill"></i></span>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta" aria-labelledby="cta-t">
+      <div class="wrap cta__in">
+        <p class="kicker reveal"><span class="dot"></span>Agenda aberta</p>
+        <h2 class="cta__title reveal" id="cta-t">Seu próximo sorriso<br>começa com uma <em>conversa</em>.</h2>
+        <a class="btn btn--solid btn--xl reveal" href="https://wa.me/5566996195448?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener" data-magnetic><span class="btn__t">Chamar no WhatsApp · (66) 99619-5448</span><svg class="ar" width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"/></svg></a>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact" id="contato">
+      <div class="wrap contact__grid">
+        <div class="contact__txt">
+          <p class="kicker reveal"><span class="dot"></span>Localização e contato</p>
+          <h2 class="h2 reveal">Venha nos <em>conhecer</em>.</h2>
+          <dl class="contact__list reveal">
+            <div><dt>Endereço</dt><dd><address>Rua das Hortênsias, 1439<br>Setor Comercial, Sinop - MT<br>CEP 78.550-100</address></dd></div>
+            <!-- TODO: horário de atendimento -->
+            <div><dt>Horário</dt><dd>A confirmar pelo WhatsApp</dd></div>
+            <div><dt>WhatsApp</dt><dd><a class="ulink" href="https://wa.me/5566996195448?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener">(66) 99619-5448</a></dd></div>
+            <div><dt>Instagram</dt><dd><a class="ulink" href="https://www.instagram.com/haraodontologia/" target="_blank" rel="noopener">@haraodontologia</a></dd></div>
+          </dl>
+        </div>
+        <div class="map clip">
           <iframe title="Mapa: Hara Odontologia, Rua das Hortênsias, 1439, Sinop - MT" src="https://www.google.com/maps?q=Rua+das+Hort%C3%AAnsias,+1439,+Setor+Comercial,+Sinop,+MT,+78550-100&amp;output=embed" width="640" height="480" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         </div>
       </div>
@@ -238,32 +280,35 @@
   </main>
 
   <footer class="foot">
-    <div class="wrap foot__in">
-      <div>
-        <p class="wordmark wordmark--foot"><span>Hara</span></p>
-        <p class="foot__tag">Odontologia em Sinop, Mato Grosso.</p>
+    <div class="wrap">
+      <div class="foot__top">
+        <p class="foot__word">Hara<span>.</span></p>
+        <a class="btn btn--line" href="https://wa.me/5566996195448?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener"><span class="btn__t">Agendar avaliação</span><svg class="ar" width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"/></svg></a>
       </div>
-      <nav class="foot__col" aria-label="Rodapé">
-        <a href="#especialidades">Especialidades</a>
-        <a href="#doutores">Os doutores</a>
-        <a href="#clinica">A clínica</a>
-        <a href="#placas">Placas</a>
-        <a href="#contato">Contato</a>
-      </nav>
-      <div class="foot__col">
-        <a href="https://www.instagram.com/haraodontologia/" target="_blank" rel="noopener" aria-label="Instagram da Hara Odontologia">
-          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="4"/><circle cx="10" cy="10" r="3.2"/><circle cx="14.2" cy="5.8" r=".6" fill="currentColor"/></svg>
-          @haraodontologia
-        </a>
-        <span>Rua das Hortênsias, 1439<br>Setor Comercial, Sinop - MT<br>CEP 78.550-100</span>
+      <div class="foot__cols">
+        <p class="foot__tag">Odontologia em Sinop, Mato Grosso.<br>Estética · Implantes · Periodontia · Prótese</p>
+        <nav class="foot__col" aria-label="Rodapé">
+          <a href="#manifesto">A clínica</a>
+          <a href="#especialidades">Especialidades</a>
+          <a href="#doutores">Os doutores</a>
+          <a href="#placas">Placas</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <div class="foot__col">
+          <a href="https://www.instagram.com/haraodontologia/" target="_blank" rel="noopener" aria-label="Instagram da Hara Odontologia">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="4"/><circle cx="10" cy="10" r="3.2"/><circle cx="14.2" cy="5.8" r=".6" fill="currentColor"/></svg>
+            @haraodontologia
+          </a>
+          <span>Rua das Hortênsias, 1439<br>Setor Comercial, Sinop - MT<br>CEP 78.550-100</span>
+        </div>
       </div>
-    </div>
-    <div class="wrap foot__legal">
-      <p>Este site não substitui uma avaliação clínica presencial. As imagens mostram pacientes com placas de proteção feitas na clínica, usadas aqui com autorização.</p>
-      <p class="mono">© <span id="ano">2026</span> Hara Odontologia</p>
+      <div class="foot__legal">
+        <p>Este site não substitui uma avaliação clínica presencial. As imagens mostram pacientes com placas de proteção feitas na clínica, usadas aqui com autorização.</p>
+        <p>© <span id="ano">2026</span> Hara Odontologia</p>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="main.js?v=3" defer></script>
 </body>
 </html>
