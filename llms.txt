@@ -1,6 +1,6 @@
 # Hara Odontologia
 
-> Clínica odontológica em Sinop, Mato Grosso (Brasil), com os cirurgiões-dentistas Dr. Eduardo Hara e Dr. João Vitor Hara. Atende estética, implantes, periodontia e prótese, e faz placas de proteção personalizadas para quem treina e compete.
+> Clínica odontológica em Sinop, Mato Grosso (Brasil), com os cirurgiões-dentistas Dr. Eduardo Hara e Dr. João Vitor Hara. Atende estética, implantes, periodontia e prótese, e atua em Odontologia do Esporte, com protetores bucais personalizados para quem treina e compete.
 
 ## Dados da clínica
 - Nome: Hara Odontologia
@@ -20,7 +20,7 @@
 - Implantes: pino de titânio colocado no osso para substituir a raiz de um dente perdido e servir de base para uma coroa. Exige avaliação do osso e da saúde geral.
 - Periodontia: cuidado com as estruturas que sustentam os dentes (gengiva e osso); trata sangramentos, inflamações e outras alterações da gengiva.
 - Prótese: reposição de dentes ausentes ou muito danificados por coroas, pontes ou próteses, para recuperar mastigação, fala e aparência.
-- Placas de proteção personalizadas: feitas sob medida para quem treina e compete, desenhadas junto com o paciente.
+- Odontologia do Esporte: cuidado da saúde bucal do atleta e protetores bucais (placas de proteção) personalizados, feitos sob medida e desenhados junto com o paciente. Ajudam a reduzir o risco de traumas e fraturas dentárias em esportes de contato, ajudam a amortecer impactos na articulação da mandíbula (ATM) e são ajustados para não atrapalhar a respiração e a fala. A clínica também avalia como a saúde bucal pode influenciar o desempenho e a recuperação de quem treina.
 
 ## Primeira consulta
 1. Avaliação: conversa sobre a queixa e o histórico; exame de boca, dentes e gengiva, com exames complementares quando indicados.

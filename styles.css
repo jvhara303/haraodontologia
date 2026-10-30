@@ -300,3 +300,11 @@ em { font-style: italic; }
   .js .reveal, .js .clip, .js .clip img, [data-in], .hero__title .ln > span { opacity: 1 !important; transform: none !important; clip-path: none !important; }
   .hero__media { clip-path: none !important; }
 }
+
+/* odontologia do esporte */
+.plates__points { list-style: none; margin: 0 auto 40px; padding: 0 var(--gutter); display: grid; gap: 0; }
+.plates__points li { padding: 20px 0; border-top: 1px solid rgba(24, 24, 26, .14); }
+.plates__points h3 { font: 400 1.35rem/1.2 var(--serif); letter-spacing: -.01em; margin: 0 0 6px; color: var(--ink); }
+.plates__points p { margin: 0; color: var(--muted); font-size: .95rem; line-height: 1.6; max-width: 42ch; }
+@media (min-width: 700px) { .plates__points { grid-template-columns: repeat(2, 1fr); column-gap: 40px; } }
+@media (min-width: 1000px) { .plates__points { grid-template-columns: repeat(4, 1fr); column-gap: 32px; max-width: 1360px; margin-bottom: 56px; } }
