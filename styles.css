@@ -132,7 +132,7 @@ em { font-style: italic; }
   .hero__media { inset: 0 0 0 auto; width: 48vw; height: 100%; clip-path: inset(0 0 0 100%); }
   .hero__media::after { background: linear-gradient(90deg, var(--graphite) 0%, rgba(20, 20, 22, .35) 38%, rgba(20, 20, 22, .05) 70%), linear-gradient(0deg, var(--graphite) 0%, transparent 28%); }
   .hero__in { padding: 150px var(--gutter) 64px; justify-content: center; }
-  .hero__foot { grid-template-columns: minmax(0, 46ch); max-width: 680px; margin-top: 44px; gap: 36px; }
+  .hero__foot { grid-template-columns: 1fr; max-width: 680px; margin-top: 44px; gap: 36px; }
 }
 
 /* ---------- marquee ---------- */
